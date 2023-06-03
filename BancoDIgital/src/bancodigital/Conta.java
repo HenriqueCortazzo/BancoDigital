@@ -41,8 +41,8 @@ public class Conta extends ContaInterface {
     }
 
     protected void imprimirInfosComuns() {
-        System.out.println(String.format("Titular: %s", this.cliente.getNome()));
-        System.out.println(String.format("CPF: %s", this.cliente.getCpf()));
+        System.out.println(String.format("Titular: %s", this.getCliente().getNome()));
+        System.out.println(String.format("CPF: %s", this.getCliente().getCpf()));
         System.out.println(String.format("Agencia: %d", this.agencia));
         System.out.println(String.format("Numero: %d", this.numero));
         System.out.println(String.format("Saldo: %.2f", this.saldo));
@@ -68,5 +68,12 @@ public class Conta extends ContaInterface {
      */
     public double getSaldo() {
         return saldo;
+    }
+
+    /**
+     * @return the cliente
+     */
+    public Cliente getCliente() {
+        return cliente;
     }
 }
